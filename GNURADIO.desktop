@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/usr/local/bin/gnuradio-companion
+Name=gnuradio
+Comment=GNURADIO-COMPANION
+Icon=/usr/local/share/doc/gnuradio-3.7.13.5/html/gnuradio_logo_icon.png
+Name[en_US]=GNURADIO.desktop
