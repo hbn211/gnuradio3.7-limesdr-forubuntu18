@@ -85,7 +85,7 @@ script(){
 
     echo 'Moving shortcut to the /usr/share/applications/'
 
-    chmod 777 GNURADIO.desktop
+
     mv GNURADIO.desktop /usr/share/applications/
 
     echo "You have to open the GNURADIO.desktop and select Trust and Launch at the first time"
