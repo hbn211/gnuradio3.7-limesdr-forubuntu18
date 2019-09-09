@@ -86,7 +86,7 @@ script(){
     echo 'Moving shortcut to the /usr/share/applications/'
 
 
-    mv GNURADIO.desktop /usr/share/applications/
+    cp GNURADIO.desktop /usr/share/applications/
 
     echo "You have to open the GNURADIO.desktop and select Trust and Launch at the first time"
     echo "ENJOY!"
