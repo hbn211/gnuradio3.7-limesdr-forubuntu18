@@ -53,16 +53,18 @@ gr-limesdr(){
     echo '>>>>> GIT CLONE <<<<<'
     git clone https://github.com/myriadrf/gr-limesdr.git
     cd gr-limesdr
+
+    git checkout 83006c6
     
-    echo 'CHECKING #define BOARD_PARAM_DAC 0'
-    if ! cat lib/common/*.* | grep '#define BOARD_PARAM_DAC 0'
-    then
-        echo 'Inserting #define BOARD_PARAM_DAC 0 in device_handler.h'
-        sed 's/#include <vector>/#include <vector>\n\n#define BOARD_PARAM_DAC 0/' lib/common/device_handler.h > lib/common/device_handler.h.tmp
-        mv lib/common/device_handler.h.tmp lib/common/device_handler.h
-        chmod 755 lib/common/device_handler.h
-        echo 'DONE'
-    fi
+    # echo 'CHECKING #define BOARD_PARAM_DAC 0'
+    # if ! cat lib/common/*.* | grep '#define BOARD_PARAM_DAC 0'
+    # then
+    #     echo 'Inserting #define BOARD_PARAM_DAC 0 in device_handler.h'
+    #     sed 's/#include <vector>/#include <vector>\n\n#define BOARD_PARAM_DAC 0/' lib/common/device_handler.h > lib/common/device_handler.h.tmp
+    #     mv lib/common/device_handler.h.tmp lib/common/device_handler.h
+    #     chmod 755 lib/common/device_handler.h
+    #     echo 'DONE'
+    # fi
 
     echo '>>>>> MKDIR BUILD <<<<<'
     mkdir build
@@ -83,7 +85,7 @@ gr-limesdr(){
 }
 
 script(){
-    GnuRadio;
+    #GnuRadio;
     gr-limesdr;
 
     echo 'Moving shortcut to the /usr/share/applications/'
