@@ -7,14 +7,17 @@ GnuRadio(){
     python-numpy python-wxgtk3.0 python-sphinx python-cheetah swig libzmq3-dev \
     libfftw3-dev libgsl-dev libcppunit-dev doxygen libcomedi-dev libqt4-opengl-dev \
     python-qt4 libqwt-dev libsdl1.2-dev libusb-1.0-0-dev python-gtk2 python-lxml \
-    pkg-config python-sip-dev -y
+    pkg-config python3-cheetah python-sip-dev -y
     
     read -p "Before GIT CLONE, Check and Press [Enter] to continue..."
     echo '>>>>> GIT CLONE <<<<<'
     git clone --recursive https://github.com/gnuradio/gnuradio.git
     cd gnuradio
-    echo '>>>>> CHECKOUT 3.7.13.5 <<<<<'
-    git checkout c6c5753
+    echo '>>>>> CHECKOUT 3.7.14.0<<<<' #13.5 <<<<<'
+    git checkout be173d6
+		# c6c5753
+    git submodule init
+    git submodule update
     echo '>>>>> MKDIR BUILD <<<<<'
     mkdir build
     echo '>>>>> BUILD FOLDER <<<<<'
