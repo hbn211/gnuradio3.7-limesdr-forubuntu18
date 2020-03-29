@@ -85,7 +85,7 @@ gr-limesdr(){
 }
 
 script(){
-    #GnuRadio;
+    GnuRadio;
     gr-limesdr;
 
     echo 'Moving shortcut to the /usr/share/applications/'
